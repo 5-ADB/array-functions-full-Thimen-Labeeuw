@@ -3,24 +3,26 @@ autos = [
     merk: "lamborghini",
     kleur: "blauw",
     bouwjaar: "2001",
-    prijs: "300000euro",
+    prijs: 300000,
   },
   {
     merk: "ferari",
     kleur: "donkerrood",
     bouwjaar: "2020",
-    prijs: "600000euro",
+    prijs: 600000,
   },
   {
     merk: "fiat",
     kleur: "biege/bordeau",
     bouwjaar: "1987",
-    prijs: "25000",
+    prijs: 25000,
   },
 ];
 
-autos.forEach((valuen, index) =>
-  console.log(
-    `merk: ${autos[index].merk}, prijs: ${autos[index].prijs}`
-  )
-);
+function totaalPrijs(lijst) {
+  let totaal = 0;
+  autos.forEach((value, index) => (totaal += autos[index].prijs));
+  return totaal;
+}
+
+console.log(totaalPrijs(autos));

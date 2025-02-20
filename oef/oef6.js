@@ -19,8 +19,13 @@ autos = [
   },
 ];
 
-autos.forEach((valuen, index) =>
-  console.log(
-    `merk: ${autos[index].merk}, prijs: ${autos[index].prijs}`
-  )
-);
+const newCar = {
+  merk: "opel",
+  kleur: "bruin",
+  bouwjaar: "2009",
+  prijs: 38921,
+};
+
+autos.push(newCar);
+
+console.log(autos);

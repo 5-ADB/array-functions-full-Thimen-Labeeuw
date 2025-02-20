@@ -3,24 +3,27 @@ autos = [
     merk: "lamborghini",
     kleur: "blauw",
     bouwjaar: "2001",
-    prijs: "300000euro",
+    prijs: 300000,
   },
   {
     merk: "ferari",
     kleur: "donkerrood",
     bouwjaar: "2020",
-    prijs: "600000euro",
+    prijs: 600000,
   },
   {
     merk: "fiat",
     kleur: "biege/bordeau",
     bouwjaar: "1987",
-    prijs: "25000",
+    prijs: 25000,
   },
 ];
 
-autos.forEach((valuen, index) =>
-  console.log(
-    `merk: ${autos[index].merk}, prijs: ${autos[index].prijs}`
-  )
-);
+VerkorteAutoLijst = autos.map((value, index) => {
+  return {
+    merk: `${autos[index].prijs}`,
+    bouwjaar: `${autos[index].bouwjaar}`,
+  };
+});
+
+console.log(VerkorteAutoLijst);
